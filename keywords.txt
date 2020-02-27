@@ -1,0 +1,4 @@
+Event	KEYWORD1
+begin	KEYWORD2
+trigger	KEYWORD2
+reset	KEYWORD2
