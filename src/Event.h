@@ -1,7 +1,7 @@
 
 
-#ifndef Debug_h
-#define Debug_h
+#ifndef Event_h
+#define Event_h
 
 
 class Event {
@@ -16,10 +16,17 @@ public:
     start = millis();
   }
 
-  bool trigger(){
-    if (millis() - start >= interval)
+  bool trigger(bool reset = true){
+    if (millis() - start >= interval){
+
+      if (!reset)
+        this->reset();
+
       return true;
-    else return false;
+    }
+    else {
+      return false;
+    }
   }
 
   void reset(){
